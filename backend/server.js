@@ -166,7 +166,7 @@ app.post('/login', async (req, res) => {
     const match = await bcrypt.compare(password, user.passwordHash);
     if (!match) return res.json({ ok: false, message: "Invalid credentials" });
 
-    // ✔ Generate JWT
+    // Generate JWT
     const token = generateJwt(user);
 
     return res.json({
@@ -178,7 +178,7 @@ app.post('/login', async (req, res) => {
 });
 
 
-// ✔ PROTECTED ROUTE
+// PROTECTED ROUTE
 app.get('/me', async (req, res) => {
     const auth = req.headers.authorization;
     if (!auth) return res.status(401).json({ ok: false, message: "No token" });
