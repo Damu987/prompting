@@ -1,0 +1,147 @@
+.register-wrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f4f6f9; 
+    overflow: hidden;
+    font-family: "Inter", "Poppins", sans-serif;
+}
+
+.register-container {
+    width: 100%;
+    max-width: 460px;
+    padding: 2em 2em;
+    border-radius: 18px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.09);
+}
+
+.register-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    background: linear-gradient(90deg, #111, #4b5563);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.3rem;
+}
+
+.register-form label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* Input Fields */
+.register-form input {
+    width: 100%;
+    padding: 0.6em 0.8em;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 1rem;
+    background: #f9fafb;
+    color: #111;
+    transition: all 0.2s ease;
+}
+
+.register-form input:focus {
+    outline: none;
+    background: #fff;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.25);
+}
+
+.otp-row {
+    display: flex;
+    justify-content: flex-end;
+    width: 50%;
+}
+
+.otp {
+    padding: 0.6em 1em;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #fff;
+    margin-top: 1em;
+    background: #111827;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.otp:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.create {
+    width: 100%;
+    padding: 0.9rem 0;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #fff;
+    background: #111827;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.create:hover {
+    background: #1f2937;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    text-align: center;
+    margin-top: 1.4rem;
+}
+
+.login {
+    background: none;
+    border: none;
+    color: #111827;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+}
+
+.login:hover {
+    color: #4b5563;
+}
+
+/*Responsive*/
+@media (max-width: 480px) {
+    .register-container {
+        padding: 2rem 1.5rem;
+    }
+
+    .register-container h2 {
+        font-size: 1.6rem;
+    }
+
+    .create,
+    .otp {
+        font-size: 1rem;
+    }
+}

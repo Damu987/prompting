@@ -1,0 +1,88 @@
+.profile-section-container {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 0 1rem;
+}
+
+.tabs {
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  border-radius: 12px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: var(--pumpkin-spice) transparent; 
+}
+
+.tabs::-webkit-scrollbar {
+  height: 6px;
+}
+
+.tabs::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.tabs::-webkit-scrollbar-thumb {
+  background: var(--pumpkin-spice);
+  border-radius: 12px;
+}
+
+.tab-button {
+  background: none;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  color: black;
+  position: relative;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.tab-button:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.tab-button.active {
+  color: var(--text);
+  font-weight: 600;
+  background: linear-gradient(90deg, var(--pumpkin-spice), var(--princeton-orange));
+  box-shadow: 0 4px 16px rgba(255, 158, 0, 0.25);
+  transform: translateY(-2px);
+}
+
+.tab-content {
+  background-color: var(--card);
+  padding: 2rem;
+  margin-top: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 12px 28px rgba(255, 158, 0, 0.08);
+  transition: all 0.3s ease;
+  color: var(--text-light);
+}
+
+.tab-content > * {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    gap: 0.5rem;
+    padding: 0.25rem;
+  }
+  .tab-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.95rem;
+  }
+  .tab-content {
+    padding: 1.25rem;
+  }
+}
